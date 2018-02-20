@@ -42,7 +42,7 @@ public class Controller implements Initializable {
     public  void Login(ActionEvent event){
         try {
             if (this.loginmodel.isLogin(this.username.getText(),this.password.getText())){
-                double stage = this.btnLogin.getScene().getWidth();
+                Stage stage = (Stage) this.btnLogin.getScene().getWindow();
                 stage.close();
                 adminDashBoard();
             }else {
